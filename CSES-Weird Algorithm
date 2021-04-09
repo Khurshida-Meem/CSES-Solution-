@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define ll long long
+#define pb push_back
+
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    fast
+
+    ll int a,b,c,d,n,t,p,q,r=1;
+    cin>>a;
+    cout<<a;
+    while(a!=1)
+    {
+        if(a%2!=0)
+        {
+            a=a*3+1;
+            cout<<" "<<a;
+        }
+        else
+        {
+            a/=2;
+            cout<<" "<<a;
+        }
+    }
+    cout<<endl;
+
+
+}
