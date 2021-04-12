@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define ll long long
+#define pb push_back
+
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    fast
+
+    ll int a,b=0,c,d,n,t,p;
+    cin>>a;
+    vector<int>v,v1;
+    c= a*(a+1)/2;
+    if(c%2!=0)
+    {
+        cout<<"NO"<<endl;
+    }
+    else
+    {
+        cout<<"YES"<<endl;
+        c/=2;
+        while(a>0)
+        {
+            if(c-a>=0)
+            {
+                v.pb(a);
+                c-=a;
+            }
+            else
+            {
+                v1.pb(a);
+            }
+            a--;
+        }
+        cout<<v.size()<<endl;
+        for(int i=0;i<v.size();i++)
+        {
+            cout<<v[i]<<" ";
+        }
+        cout<<endl;
+        cout<<v1.size()<<endl;
+        for(int i=0;i<v1.size();i++)
+        {
+            cout<<v1[i]<<" ";
+        }
+        cout<<endl;
+
+    }
+
+}
