@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define ll long long
+
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    fast
+    ll int t,a,b,c,d,e,n,ocnt=0;
+    string s,s1="",s2="";
+    char ochr;
+    cin>>s;
+    unordered_map<char, int>m;
+
+    for(int i=0;i<s.length();i++)
+    {
+        m[s[i]]++;
+    }
+    for(auto x:m)
+    {
+        if(x.second%2!=0)
+        {
+            ocnt++;
+            ochr= x.first;
+        }
+    }
+
+    if(ocnt>1 || (ocnt==1&&s.length()%2==0))
+    {
+        cout<<"NO SOLUTION"<<endl;
+    }
+    else
+    {
+        for(auto x:m)
+        {
+            string s3(x.second/2,x.first);
+            s1= s1+s3;
+            s2=s3+s2;
+        }
+
+        if(ocnt==1)
+            cout<<s1+ochr+s2<<endl;
+        else
+            cout<<s1+s2<<endl;
+    }
+
+}
